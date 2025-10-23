@@ -2,23 +2,69 @@
 
 int main(){
     //varpiáveis 
-    int peca, sentidoTorre, movimentacaodapeca;
+    int peca, sentidoTorre, movimentacaodapeca, i, movimentoDoCavalo = 1 ;
     //Menu de opções das peças
-    printf("---Jogo Xadrez---\n");
-    printf("Escolha uma peça para mover:\n");
     printf("\n");
+    printf("---SEJA BEM VINDO(A) AO JOGO DE XADREZ---\n");
+    printf("\n");
+    printf("Escolha uma peça para mover:\n");
     printf("1. Torre.\n");
     printf("2. Bispo.\n");
     printf("3. Raínha.\n");
+    printf("4. Cavalo.\n");
     printf("Escolha sua peça: ");
     scanf("%d", &peca);
     printf("\n");
     //switch da opção das peças
     switch (peca)
     {
+    //Sentido da peça.
+    //-----------------Início do Switch do cavaco.-----------------
+        case 4:
+        printf("---Sentido da peça---\n");
+        printf("1. Cima/esquerda.\n");
+        printf("2. Cima/direita.\n");
+        printf("Escolha o sentido em que a peça vai andar: ");
+        scanf("%d", &sentidoTorre);
+        printf("\n");
+        //INÍCIO DO CASE DO SENTIDO QUE O VAVALO VAI ANDAR
+        switch (sentidoTorre)
+        {
+        case 1:
+                while (movimentoDoCavalo--)
+                    {
+                        for (i = 0; i < 2; i++)
+                        {
+                            printf("Cima\n");
+                        }
+                        printf("Direita\n");
+
+                    }
+            break;
+        
+        case 2:
+                while (movimentoDoCavalo--)
+                    {
+                        for (i = 0; i < 2; i++)//i inicia 0 e enquanoto ele for menor que 2 e vai acrecentar mais 1.
+                        {
+                            printf("Cima\n");//vai imprimir "cima" toda vez que a verificação for verdadeira.
+                        }
+                        printf("Esquerda\n");//imprime quando a verificação do for for falsa.
+                        
+                    }
+            break;
+        
+        default: printf("Erro! Escolha um número de 1 a 2.\n");// caso o usuário escolha um número inexistente. 
+            break;
+        }
+        break;
+        
+        
+        //FIM DO CASE DO SENTIDO QUE O VAVALO VAI ANDAR
+    //-----------------Fim do Switch do cavalo.-----------------
     
     //Sentido da peça.
-    //-----------------Início do case da Raínha.-----------------
+    //-----------------Início do case da Rainha.-----------------
     case 3:
         printf("---Sentido da peça---\n");
         printf("1. Cima/esquerda.\n");
@@ -563,7 +609,7 @@ int main(){
                 break;                
      }        
      break;
-     //------------------Fim do case 2 do bispo-----------.
+//------------------Fim do case 2 do bispo-----------.
 
     //Escolha do sentido em que a peça vai andar(cima, baixo, direita ou esquerda).  
     //-------------Inicio do Case da torre------------.  
@@ -783,7 +829,7 @@ int main(){
 //----------Fim do case 1 da torre.----------  
 //Se a escolha da peça for diferente de 1 a 3.
             break;
-            default: printf("Erro! Escolha um número de 1 a 3.\n");
+            default: printf("Erro! Escolha um número de 1 a 4.\n");
             break;      
     }
 
