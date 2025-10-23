@@ -2,7 +2,7 @@
 
 int main(){
     //varpiáveis 
-    int peca, sentidoTorre, movimentacaodapeca, i, movimentoDoCavalo = 1 ;
+    int peca, sentidoDaPeca, movimentacaodapeca, i, movimentoDoCavalo = 1 ;
     //Menu de opções das peças
     printf("\n");
     printf("---SEJA BEM VINDO(A) AO JOGO DE XADREZ---\n");
@@ -25,10 +25,10 @@ int main(){
         printf("1. Cima/esquerda.\n");
         printf("2. Cima/direita.\n");
         printf("Escolha o sentido em que a peça vai andar: ");
-        scanf("%d", &sentidoTorre);
+        scanf("%d", &sentidoDaPeca);
         printf("\n");
         //INÍCIO DO CASE DO SENTIDO QUE O VAVALO VAI ANDAR
-        switch (sentidoTorre)
+        switch (sentidoDaPeca)
         {
         case 1:
                 while (movimentoDoCavalo--)
@@ -37,7 +37,7 @@ int main(){
                         {
                             printf("Cima\n");
                         }
-                        printf("Direita\n");
+                        printf("Esquerda\n");
 
                     }
             break;
@@ -49,7 +49,7 @@ int main(){
                         {
                             printf("Cima\n");//vai imprimir "cima" toda vez que a verificação for verdadeira.
                         }
-                        printf("Esquerda\n");//imprime quando a verificação do for for falsa.
+                        printf("Direita\n");//imprime quando a verificação do for for falsa.
                         
                     }
             break;
@@ -76,9 +76,9 @@ int main(){
         printf("7. Esquerda.\n");
         printf("8. Direita.\n");
         printf("Escolha o sentido em que a peça vai andar: ");
-        scanf("%d", &sentidoTorre);
+        scanf("%d", &sentidoDaPeca);
         printf("\n");
-            switch (sentidoTorre)
+            switch (sentidoDaPeca)
             {
             //Quantidade de casas que a Rainha vai andar.
             case 1:
@@ -392,9 +392,9 @@ int main(){
         printf("3. Cima/direita.\n");
         printf("4. Baixo/direita.\n");
         printf("Escolha o sentido em que a peça vai andar: ");
-        scanf("%d", &sentidoTorre);
+        scanf("%d", &sentidoDaPeca);
         printf("\n");
-            switch (sentidoTorre)
+            switch (sentidoDaPeca)
             {
             //Quantidade de casas que do bispo vai andar.
             case 1:
@@ -620,9 +620,9 @@ int main(){
         printf("3. Esquerda.\n");
         printf("4. Direita.\n");
         printf("Escolha o sentido em que a peça vai andar: ");
-        scanf("%d", &sentidoTorre);
+        scanf("%d", &sentidoDaPeca);
         printf("\n");
-            switch (sentidoTorre)
+            switch (sentidoDaPeca)
             {
             //Quantidade de casas que a torre vai andar.
             case 1:
